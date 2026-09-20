@@ -1,0 +1,285 @@
+/* 1. Центрирование заголовка через margin: 0 auto */
+.menu-title-centered {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* 2. Секция меню как Grid (требование: grid-template-columns с fr, repeat и minmax) */
+.menu-grid-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.menu-grid-section th, .menu-grid-section td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eaeaea;
+  text-align: left;
+}
+
+.menu-grid-section th {
+  background-color: #f8f8f8;
+  font-weight: 600;
+}
+
+/* 3. Позиционирование: relative для контейнера картинки и absolute для бейджа */
+.image-box-relative {
+  position: relative; /* position: relative по заданию */
+  max-width: 600px;
+  margin: 40px auto; /* Центрирование блока через margin auto */
+  text-align: center;
+}
+
+.menu-img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.menu-badge {
+  position: absolute; /* position: absolute по заданию */
+  top: 15px;
+  right: 15px;
+  background-color: #ff3333;
+  color: #ffffff;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+/* 4. Оформление блока цитаты */
+.quote-container {
+  background-color: #f8f8f8;
+  border-left: 4px solid #ff3333;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Главный баннер на главной странице */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 40px 0 60px 0;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-subtitle {
+  color: #ff3333;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.hero-section h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin: 15px 0 20px 0;
+  color: #111111;
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+/* Фирменная красная кнопка */
+.hero-button {
+  display: inline-block;
+  background-color: #ff3333;
+  color: #ffffff;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #e02e2e;
+}
+
+.hero-image-box {
+  flex: 1;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Секция преимуществ с Flexbox и flex-wrap (Требование задания) */
+.features-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.features-flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Карточки аккуратно переносятся на новую строку на узких экранах */
+  gap: 25px;
+  justify-content: center;
+}
+
+.feature-card {
+  flex: 1 1 300px; /* Карточка гибкая, но стремится к ширине 300px */
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px); /* Легкий подъем при наведении */
+}
+
+.feature-card h3 {
+  color: #ff3333;
+  margin-bottom: 12px;
+}
+
+/* Страница заказа: центрирование заголовка */
+.order-title-centered {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #111111;
+}
+
+.order-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  color: #555555;
+}
+
+/* Контейнер формы */
+.order-form-section {
+  max-width: 550px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+/* Стили полей ввода */
+.coffee-order-form .form-group {
+  margin-bottom: 20px;
+}
+
+.coffee-order-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.coffee-order-form input[type="text"],
+.coffee-order-form input[type="tel"],
+.coffee-order-form select,
+.coffee-order-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #ffffff;
+  box-sizing: border-box; /* Чтобы padding не ломал ширину */
+}
+
+.coffee-order-form input:focus,
+.coffee-order-form select:focus,
+.coffee-order-form textarea:focus {
+  border-color: #ff3333;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 51, 51, 0.2);
+}
+
+/* Фирменная кнопка отправки заказа */
+.submit-order-btn {
+  width: 100%;
+  background-color: #ff3333;
+  color: #ffffff;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-order-btn:hover {
+  background-color: #e02e2e;
+}
+
+/* Страница отзывов: центрирование заголовка */
+.reviews-title-centered {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #111111;
+}
+
+.reviews-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  color: #555555;
+}
+
+/* Сетка для карточек отзывов (Grid) */
+.reviews-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+/* Карточка отдельного отзыва */
+.review-card {
+  background-color: #f8f8f8;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  border-left: 4px solid #ff3333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-card q {
+  font-style: italic;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.review-author {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #111111;
+}
+
+.review-date {
+  color: #777777;
+  font-size: 13px;
+  margin-top: 4px;
+}
