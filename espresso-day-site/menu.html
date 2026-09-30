@@ -6,28 +6,38 @@
     <meta name="description" content="Полное меню Espresso Day на Сыганак 16 в Астане с ценами в тенге.">
     <meta name="author" content="Yerkezhan">
     <title>Меню и цены — Espresso Day</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/yerkezhan.css">
 </head>
-<body>
-    <header class="site-header">
-        <div class="logo-container">
-            <span class="logo-text">Espresso Day</span>
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="menu.html" class="active">Меню</a></li>
-                <li><a href="order.html">Заказ</a></li>
-                <li><a href="reviews.html">Отзывы</a></li>
-            </ul>
+<body class="d-flex flex-column min-vh-100">
+    <header class="border-bottom bg-white">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid px-3 px-md-4">
+                <a class="navbar-brand fw-bold" href="index.html">Espresso Day</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню навигации">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-md-end" id="mainNav">
+                    <ul class="navbar-nav gap-md-3">
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Главная</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold active" aria-current="page" href="menu.html">Меню</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="order.html">Заказ</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="reviews.html">Отзывы</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main class="main-content">
-        <h1 class="menu-title-centered">Меню Espresso Day</h1>
+    <!-- container таблица и списки остаются читаемыми на широком мониторе -->
+    <main class="container flex-grow-1 py-4 py-md-5">
+        <h1 class="display-5 fw-bold text-center mb-4">Меню Espresso Day</h1>
 
-        <p>
+        <div class="row">
+        <div class="col-12 col-xl-10 mx-auto">
+
+        <p class="lead">
             Ниже &mdash; актуальное меню филиала на Сыганак 16 с ценами в тенге.
             Мы разделили наше меню так, чтобы вам было проще выбирать. 
             У нас есть всё: бодрящий айс-кофе, освежающие лимонады, любимая 
@@ -36,11 +46,11 @@
             "бэйби дринкс", а домой можно захватить наш фирменный кофе в зернах — фасовкой 250 г или 1 кг.
         </p>
 
-        <section id="tseny" class="menu-grid-section">
-            <h2>Лимонады, смузи и молочные коктейли</h2>
+        <section id="tseny">
+            <h2 class="h3 mb-3">Лимонады, смузи и молочные коктейли</h2>
 
             <article>
-                <h3>Новая коллекция «Sabyt»</h3>
+                <h3 class="h4">Новая коллекция «Sabyt»</h3>
             </article>
             <p>
                 В Espresso Day осеннее обновление. 
@@ -53,8 +63,10 @@
                 можно смело считать ориентиром для всей сети.
             </p>
 
-            <table>
-                <thead>
+            <!-- table-responsive: на телефоне таблица прокручивается внутри своего блока, а не раздвигает всю страницу -->
+            <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+                <thead class="table-light">
                     <tr>
                         <th scope="col">Напиток</th>
                         <th scope="col">Категория</th>
@@ -137,18 +149,24 @@
                     </tr>
                 </tbody>
             </table>
-            <p><small><sup>1</sup> Все цены указаны в тенге.</small></p>
+            </div>
+            <p class="text-muted"><small><sup>1</sup> Все цены указаны в тенге.</small></p>
         </section>
 
-        <hr>
+        <hr class="my-5">
 
         <section>
-            <h2>Самые заметные позиции</h2>
+            <h2 class="h3 mb-3">Самые заметные позиции</h2>
+            <!-- Вложенность: внутри колонки (col-xl-10) лежит ещё один row со своими колонками -->
+            <div class="row g-3">
+            <div class="col-12 col-md-6">
             <ol start="1">
                 <li>Kokos Matcha &mdash; 1 790 тг</li>
                 <li>Balmuzdaq Matcha &mdash; 2 190 тг</li>
                 <li>Tropikalyq tonic &mdash; 2 090 тг</li>
             </ol>
+            </div>
+            <div class="col-12 col-md-6">
             <ul>
                 <li>Холодные напитки
                     <ul>
@@ -166,35 +184,50 @@
                     </ul>
                 </li>
             </ul>
+            </div>
+            </div>
         </section>
 
-        <aside>
-            <p>
+        <aside class="mt-4">
+            <p class="text-center text-md-start">
                 У кофейни есть услуга навынос &mdash; заказ можно оформить заранее
                 на <a href="order.html">странице заказа</a> этого сайта.
             </p>
         </aside>
 
-        <div class="image-box-relative">
-            <span class="menu-badge">Хит</span>
-            <img src="images/L_height.webp" alt="Меню кофейни Espresso Day на стойке" class="menu-img">
+        <div class="row justify-content-center my-5">
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="position-relative">
+                    <span class="badge text-bg-danger position-absolute top-0 end-0 m-3 fs-6">Хит</span>
+                    <img src="images/L_height.webp" alt="Меню кофейни Espresso Day на стойке" class="img-fluid rounded shadow-sm">
+                </div>
+            </div>
         </div>
 
-        <div class="quote-container">
-            <blockquote cite="https://2gis.kz/kk/astana/firm/70000001088274563">
-                <p><q>Работает круглосуточно, много мест, очень уютная кофейня&hellip;</q></p>
+        <div class="bg-light border-start border-4 border-danger rounded-end p-3 p-md-4">
+            <blockquote class="blockquote mb-2" cite="https://2gis.kz/kk/astana/firm/70000001088274563">
+                <p class="mb-0"><q>Работает круглосуточно, много мест, очень уютная кофейня&hellip;</q></p>
             </blockquote>
-            <p>&mdash; <cite>Аружан Осербаева, 21 июня 2026, изменён</cite></p>
+            <p class="text-muted mb-0">&mdash; <cite>Аружан Осербаева, 21 июня 2026, изменён</cite></p>
+        </div>
+
+        </div>
         </div>
     </main>
 
-    <footer class="site-footer">
-        <address>
-            Espresso Day, Сыганак көшесі, 16, Астана (район Нұра) &mdash; работает круглосуточно<br>
-            Телефон: <a href="tel:+77087508119">+7 708 750 8119</a> &middot;
-            <a href="https://espressoday.kz" target="_blank" rel="noopener noreferrer">espressoday.kz</a>
-        </address>
-        <p>&copy; 2026 Yerkezhan.</p>
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <!-- container: содержимое подвала по ширине выровнено с основным текстом страницы -->
+        <div class="container">
+            <address class="mb-2">
+                Espresso Day, Сыганак көшесі, 16, Астана (район Нұра) &mdash; работает круглосуточно<br>
+                Телефон: <a href="tel:+77087508119" class="link-light">+7 708 750 8119</a>
+                <span class="d-none d-sm-inline">&middot;</span>
+                <a href="https://espressoday.kz" target="_blank" rel="noopener noreferrer" class="link-light d-block d-sm-inline">espressoday.kz</a>
+            </address>
+            <p class="small mb-0">&copy; 2026 Yerkezhan.</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
