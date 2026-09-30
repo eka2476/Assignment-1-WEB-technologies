@@ -1,79 +1,26 @@
-/* 
-   ПАЛИТРА ESPRESSO DAY:
-   1. #ffffff (Чистый белый) основной фон страницы.
-   2. #111111 (черный) основной цвет текста 
-   3. #ff3333 (красный) кнопоки.
-   4. #f8f8f8 (Светло-серый) цвет фоновых подложек для карточек и блоков.
-   5. red (Именованный цвет)
+/*
+   ПАЛИТРА ESPRESSO DAY (осталась из задания 2):
+   1. #ffffff - белый, фон страницы
+   2. #111111 - чёрный, основной цвет текста и подвала
+   3. #ff3333 - красный, кнопки и акценты
+   4. #f8f8f8 - светло-серый, фон карточек и блоков
+   Здесь я только переопределяю переменные Bootstrap (цвета и шрифт),
+   вёрстку Bootstrap делает сам.
 */
-
-/* Базовые настройки шрифтов и box-sizing */
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
+:root {
+  --bs-body-font-family: Arial, Helvetica, sans-serif;
+  --bs-body-color: #111111;
+  --bs-body-line-height: 1.6;
+  --bs-border-color: #eaeaea;
+  --bs-danger: #ff3333;
+  --bs-danger-rgb: 255, 51, 51;
+  --bs-dark-rgb: 17, 17, 17;
+  --bs-light-rgb: 248, 248, 248;
+  /* ссылки чуть темнее #ff3333, чтобы красный текст на белом хорошо читался */
+  --bs-link-color-rgb: 224, 46, 46;
+  --bs-link-hover-color-rgb: 179, 36, 36;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif; /* Первый шрифт с полным fallback stack */
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0.5px;
-  color: #111111;
-  background-color: #ffffff;
-  margin: 0;
-  padding: 0;
-}
-
-/* Общий шаманский каркас для всех страниц */
-header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #eaeaea;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Навигация требуемый Flexbox с justify-content, align-items и gap */
-nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 30px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #111111;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-/* :hover  */
-nav a:hover {
-  color: #ff3333;
-}
-
-/*  :focus  */
-nav a:focus {
-  outline: 2px dashed #ff3333;
-  outline-offset: 4px;
-}
-
-main {
-  padding: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-footer {
-  background-color: #111111;
-  color: #ffffff;
-  text-align: center;
-  padding: 30px;
-  margin-top: 60px;
+  letter-spacing: 0.5px; /* из задания 2, в Bootstrap такого класса нет */
 }
