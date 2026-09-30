@@ -6,86 +6,121 @@
     <meta name="description" content="Отзывы гостей о круглосуточной кофейне Espresso Day на Сыганак 16 в Астане.">
     <meta name="author" content="Yerkezhan">
     <title>Отзывы — Espresso Day</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/yerkezhan.css">
 </head>
-<body>
-    <header class="site-header">
-        <div class="logo-container">
-            <span class="logo-text">Espresso Day</span>
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="menu.html">Меню</a></li>
-                <li><a href="order.html">Заказ</a></li>
-                <li><a href="reviews.html" class="active">Отзывы</a></li>
-            </ul>
+<body class="d-flex flex-column min-vh-100">
+    <header class="border-bottom bg-white">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid px-3 px-md-4">
+                <a class="navbar-brand fw-bold" href="index.html">Espresso Day</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню навигации">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-md-end" id="mainNav">
+                    <ul class="navbar-nav gap-md-3">
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Главная</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="menu.html">Меню</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="order.html">Заказ</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold active" aria-current="page" href="reviews.html">Отзывы</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main class="main-content">
-        <h1 class="reviews-title-centered">Что говорят наши гости</h1>
+    <!-- container карточки остаются в аккуратной сетке, а не растягиваются на весь монитор -->
+    <main class="container flex-grow-1 py-4 py-md-5">
+        <h1 class="display-5 fw-bold text-center mb-3">Что говорят наши гости</h1>
 
-        <p class="reviews-intro">
+        <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+        <p class="text-center text-muted mb-5">
             Нам важно каждое мнение! Здесь собраны реальные впечатления посетителей 
             филиала Espresso Day по адресу <strong>ул. Сыганак, 16</strong> в Астане.
         </p>
+        </div>
+        </div>
 
-        <section class="reviews-grid-container">
-            
-            <article class="review-card">
+        <!-- col-12 col-md-6 col-lg-4: 1 карточка в ряд на телефоне, 2 на планшете, 3 на компьютере. g-4 - отступы между карточками -->
+        <section class="row g-4 mb-5">
+            <article class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 border-top-0 border-end-0 border-bottom-0 border-start border-4 border-danger shadow-sm">
+                <div class="card-body">
                 <blockquote cite="https://2gis.kz/kk/astana/firm/70000001088274563">
                     <p><q>Работает круглосуточно, много мест, очень уютная кофейня&hellip;</q></p>
                 </blockquote>
-                <p class="review-author">&mdash; Аружан Осербаева</p>
-                <p class="review-date"><small>21 июня 2026</small></p>
+                <p class="fw-bold mb-0">&mdash; Аружан Осербаева</p>
+                <p class="text-muted mb-0"><small>21 июня 2026</small></p>
+                </div>
+              </div>
             </article>
 
-            <article class="review-card">
+            <article class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 border-top-0 border-end-0 border-bottom-0 border-start border-4 border-danger shadow-sm">
+                <div class="card-body">
                 <blockquote cite="https://2gis.kz/kk/astana/firm/70000001088274563">
                     <p><q>Самый лучший раф қазақша в районе! Приятная атмосфера, можно спокойно поработать ночью.</q></p>
                 </blockquote>
-                <p class="review-author">&mdash; Дамир Каримов</p>
-                <p class="review-date"><small>15 июля 2026</small></p>
+                <p class="fw-bold mb-0">&mdash; Дамир Каримов</p>
+                <p class="text-muted mb-0"><small>15 июля 2026</small></p>
+                </div>
+              </div>
             </article>
 
-            <article class="review-card">
+            <article class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 border-top-0 border-end-0 border-bottom-0 border-start border-4 border-danger shadow-sm">
+                <div class="card-body">
                 <blockquote cite="https://2gis.kz/kk/astana/firm/70000001088274563">
                     <p><q>Быстрое обслуживание, вежливый персонал и очень вкусные свежие лимонады. Рекомендую!</q></p>
                 </blockquote>
-                <p class="review-author">&mdash; Томирис Жетписова</p>
-                <p class="review-date"><small>2 августа 2026</small></p>
+                <p class="fw-bold mb-0">&mdash; Томирис Жетписова</p>
+                <p class="text-muted mb-0"><small>2 августа 2026</small></p>
+                </div>
+              </div>
             </article>
 
         </section>
 
         <!-- Блок добавления отзыва -->
-        <section class="order-form-section" style="margin-top: 50px;">
-            <h2 style="margin-bottom: 20px; color: #111111;">Оставить свой отзыв</h2>
-            <form action="#" method="get" class="coffee-order-form">
-                <div class="form-group">
-                    <label for="review-name">Ваше имя:</label>
-                    <input type="text" id="review-name" name="name" placeholder="Введите ваше имя" required>
+        <section class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-7 col-xl-6">
+        <div class="bg-light border rounded-3 shadow-sm p-3 p-md-4">
+            <h2 class="h4 mb-3">Оставить свой отзыв</h2>
+            <form action="#" method="get">
+                <div class="mb-3">
+                    <label for="review-name" class="form-label fw-semibold">Ваше имя:</label>
+                    <input type="text" id="review-name" name="name" placeholder="Введите ваше имя" class="form-control" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="review-text">Ваш отзыв:</label>
-                    <textarea id="review-text" name="text" rows="4" placeholder="Поделитесь впечатлениями..." required></textarea>
+                <div class="mb-4">
+                    <label for="review-text" class="form-label fw-semibold">Ваш отзыв:</label>
+                    <textarea id="review-text" name="text" rows="4" placeholder="Поделитесь впечатлениями..." class="form-control" required></textarea>
                 </div>
 
-                <button type="submit" class="submit-order-btn">Отправить отзыв</button>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-danger btn-lg">Отправить отзыв</button>
+                </div>
             </form>
+        </div>
+        </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <address>
-            Espresso Day, Сыганак көшесі, 16, Астана (район Нұра) &mdash; работает круглосуточно<br>
-            Телефон: <a href="tel:+77087508119">+7 708 750 8119</a> &middot;
-            <a href="https://espressoday.kz" target="_blank" rel="noopener noreferrer">espressoday.kz</a>
-        </address>
-        <p>&copy; 2026 Yerkezhan.</p>
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <!-- container: содержимое подвала по ширине выровнено с основным текстом страницы -->
+        <div class="container">
+            <address class="mb-2">
+                Espresso Day, Сыганак көшесі, 16, Астана (район Нұра) &mdash; работает круглосуточно<br>
+                Телефон: <a href="tel:+77087508119" class="link-light">+7 708 750 8119</a>
+                <span class="d-none d-sm-inline">&middot;</span>
+                <a href="https://espressoday.kz" target="_blank" rel="noopener noreferrer" class="link-light d-block d-sm-inline">espressoday.kz</a>
+            </address>
+            <p class="small mb-0">&copy; 2026 Yerkezhan.</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
