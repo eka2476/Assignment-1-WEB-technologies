@@ -1,0 +1,76 @@
+/* Мелкие поправки поверх Bootstrap только то, что нельзя сделать классами. */
+
+.btn-danger {
+  --bs-btn-focus-shadow-rgb: 255, 51, 51;
+  --bs-btn-bg: #ff3333;
+  --bs-btn-border-color: #ff3333;
+  --bs-btn-hover-bg: #e02e2e;
+  --bs-btn-hover-border-color: #e02e2e;
+  --bs-btn-active-bg: #c72929;
+  --bs-btn-active-border-color: #c72929;
+}
+
+.btn-outline-danger {
+  --bs-btn-focus-shadow-rgb: 255, 51, 51;
+  --bs-btn-color: #e02e2e;
+  --bs-btn-border-color: #ff3333;
+  --bs-btn-hover-bg: #ff3333;
+  --bs-btn-hover-border-color: #ff3333;
+  --bs-btn-active-bg: #e02e2e;
+  --bs-btn-active-border-color: #e02e2e;
+  --bs-btn-disabled-color: #e02e2e;
+  --bs-btn-disabled-border-color: #ff3333;
+}
+
+/* Навигация */
+.navbar {
+  --bs-navbar-color: #111111;
+  --bs-navbar-hover-color: #ff3333;
+  --bs-navbar-active-color: #ff3333;
+}
+
+/* Поля форм */
+.form-control:focus,
+.form-select:focus {
+  border-color: #ff3333;
+  box-shadow: 0 0 0 0.25rem rgba(255, 51, 51, 0.2);
+}
+
+/* Карточки отзывов */
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Кнопки-таблетки категорий */
+.nav-pills {
+  --bs-nav-link-color: #111111;
+  --bs-nav-link-hover-color: #ff3333;
+  --bs-nav-pills-link-active-bg: #ff3333;
+}
+
+/* Категории меню */
+[id^="cat-"] {
+  scroll-margin-top: 4.5rem;
+}
+
+/* Рамка фокуса у ссылок и кнопок-вкладок */
+.nav-link:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(255, 51, 51, 0.25);
+}
+
+/* Подготовка к JS  */
+.js-hidden {
+  display: none !important;
+}
+
+.js-error-border {
+  border-color: #ff3333 !important;
+}
+
+.js-success-bg {
+  background-color: #f8f9fa !important;
+}

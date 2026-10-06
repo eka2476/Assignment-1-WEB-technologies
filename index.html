@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Espresso Day на Сыганак 16 в Астане — кофейня, работающая круглосуточно: лимонады, кофе, смузи и авторские напитки.">
+    <meta name="author" content="Yerkezhan">
+    <title>Espresso Day, Сыганак 16 — Астана</title>
+    <!-- Bootstrap 5.3.3 (подключён с CDN). Мои файлы стилей идут ПОСЛЕ него, поэтому мои правила выигрывают там, где есть конфликт. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/yerkezhan.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- container-fluid: шапка тянется на всю ширину окна, чтобы белый фон и нижняя граница шли от края до края.
+         Основной текст ниже лежит в обычном container: там нужна ограниченная ширина строки, чтобы текст было удобно читать. -->
+    <header class="border-bottom bg-white">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid px-3 px-md-4">
+                <a class="navbar-brand fw-bold" href="index.html">Espresso Day</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню навигации">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-md-end" id="mainNav">
+                    <ul class="navbar-nav gap-md-3">
+                        <li class="nav-item"><a class="nav-link fw-semibold active" aria-current="page" href="index.html">Главная</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="menu.html">Меню</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="order.html">Заказ</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="reviews.html">Отзывы</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- container (а не container-fluid): на большом экране текст не растягивается на всё окно -->
+    <main class="container flex-grow-1 py-4 py-md-5">
+        <h1 class="display-5 fw-bold text-center text-lg-start mb-4">Espresso Day на Сыганак көшесі, 16</h1>
+
+        <div class="row g-4 align-items-center">
+            <!-- col-12 col-lg-7 + col-12 col-lg-5: на телефоне и планшете блоки друг под другом, на компьютере рядом -->
+            <div class="col-12 col-lg-7">
+
+            <p class="lead">
+                Ищете уютное место в Астане, где можно поработать или встретиться с друзьями в любое время суток?
+                Загляните в Espresso Day на Сыганак, 16!
+                Эта сеть, выросшая до сотни точек по всей стране всего за пару лет, стремится стать для своих гостей настоящим «вторым домом».
+            </p>
+
+            <p>
+               Здесь вас ждет не просто кофе, а целая палитра вкусов: от классических
+               эспрессо-напитков до авторских лимонадов и сезонных коллекций вроде «Sabyt».
+               Особый колорит меню придают названия на казахском языке, а для маленьких гостей предусмотрена линейка «бэйби дринкс».
+               На этом сайте мы собрали для вас полное актуальное меню с ценами и удобную форму для заказа.
+            </p>
+
+            <p>
+                Espresso Day &mdash; была основана в 2023 году и за три года масштабировалась до сотни точек по всему Казахстану.
+                 Ассортимент сети выходит за пределы классики: в меню представлены авторские напитки, смузи, лимонады и
+                 сезонные новинки, доступные во всех филиалах.
+            </p>
+
+            <p>
+                Данный сайт включает четыре раздела: главную страницу, актуальное меню с ценами в тенге,
+                форму для онлайн-заказа и отзывы гостей. Все данные о позициях и стоимости соответствуют текущему прайсу конкретного филиала.
+            </p>
+
+            </div>
+
+            <div class="col-12 col-lg-5 text-center">
+                <img src="images\photo_5271564811424702235_y.jpg" alt="Вывеска кофейни Espresso Day на фасаде здания на Сыганак 16 в Астане" class="img-fluid rounded shadow">
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <p class="text-center text-lg-start">
+                    Подробное меню со всеми ценами &mdash; на <a href="menu.html" class="btn btn-outline-danger btn-sm">странице меню</a>,
+                    а оформить заказ можно на <a href="order.html" class="btn btn-outline-danger btn-sm">странице заказа</a>.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <!-- container: содержимое подвала по ширине выровнено с основным текстом страницы -->
+        <div class="container">
+            <address class="mb-2">
+                Espresso Day, Сыганак көшесі, 16, Астана (район Нұра) &mdash; работает круглосуточно<br>
+                Телефон: <a href="tel:+77087508119" class="link-light">+7 708 750 8119</a>
+                <span class="d-none d-sm-inline">&middot;</span>
+                <a href="https://espressoday.kz" target="_blank" rel="noopener noreferrer" class="link-light d-block d-sm-inline">espressoday.kz</a>
+            </address>
+            <p class="small mb-0">&copy; 2026 Yerkezhan.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.3 JS bundle: нужен для работы кнопки-переключателя навигации на телефоне (своего JavaScript нет) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
