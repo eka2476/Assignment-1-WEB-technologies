@@ -1,0 +1,36 @@
+/*
+   ПАЛИТРА ESPRESSO DAY (осталась из задания 2):
+   1. #ffffff - белый, фон страницы
+   2. #111111 - чёрный, основной цвет текста и подвала
+   3. #ff3333 - красный, кнопки и акценты
+   4. #f8f8f8 - светло-серый, фон карточек и блоков
+   Здесь я только переопределяю переменные Bootstrap (цвета и шрифт),
+   вёрстку Bootstrap делает сам.
+*/
+:root {
+  --bs-body-font-family: Arial, Helvetica, sans-serif;
+  --bs-body-color: #111111;
+  --bs-body-color-rgb: 17, 17, 17;
+  /* серый для маленького и приглушённого текста (класс text-muted, small): у Bootstrap он сине-серый, делаю нейтрально-серый */
+  --bs-secondary-color: rgba(17, 17, 17, 0.65);
+  --bs-secondary-color-rgb: 17, 17, 17;
+  --bs-secondary: #6b6b6b;
+  --bs-secondary-rgb: 107, 107, 107;
+  --bs-body-line-height: 1.6;
+  --bs-border-color: #eaeaea;
+  /* главный цвет Bootstrap (по умолчанию синий) заменяю на красный Espresso Day, чтобы синего не было нигде */
+  --bs-primary: #ff3333;
+  --bs-primary-rgb: 255, 51, 51;
+  --bs-focus-ring-color: rgba(255, 51, 51, 0.25);
+  --bs-danger: #ff3333;
+  --bs-danger-rgb: 255, 51, 51;
+  --bs-dark-rgb: 17, 17, 17;
+  --bs-light-rgb: 248, 248, 248;
+  /* ссылки чуть темнее #ff3333, чтобы красный текст на белом хорошо читался */
+  --bs-link-color-rgb: 224, 46, 46;
+  --bs-link-hover-color-rgb: 179, 36, 36;
+}
+
+body {
+  letter-spacing: 0.5px; /* из задания 2, в Bootstrap такого класса нет */
+}
